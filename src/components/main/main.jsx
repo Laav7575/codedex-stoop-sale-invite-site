@@ -1,8 +1,8 @@
 import React from 'react';
 import "./main.css"
-import Button from "../RSVPButton";
+import Button from "../RSVP/RSVPButton";
 
-export default function main() {
+export default function main({theMap}) {
     return (
         <div className="main">
             <div className="header">
@@ -12,7 +12,7 @@ export default function main() {
             <div className="body">
                 <div className="info">
                     <div className="hero">
-                        <div className="location">placeholder for map here</div>
+                        <div className="location">{theMap}</div>
                         <div className="blurb">
                             <span>Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! Shoes, clothing, and more!</span>
                             <span>Saturday July 20th, 9am-3pm</span>

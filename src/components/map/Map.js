@@ -9,9 +9,7 @@ const Map = () => {
 
     const containerStyle = {
         width: '400px',
-        height: '400px',
-        left: '1250px',
-        top: '25px'
+        height: '400px'
     };
 
     const center = {
