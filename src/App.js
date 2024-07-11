@@ -1,18 +1,15 @@
 
 import './App.css';
-import Button from "./components/RSVPButton";
+import Main from "./components/main/main.jsx";
 
 function App() {
   return (
     <div className="App">
-     <h1>Yo</h1>
-     <header><Button type="pill"/></header>
+      <Main />
     </div>
   );
 
 }
-
-
 
 
 export default App;
