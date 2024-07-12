@@ -3,7 +3,6 @@ import { useJsApiLoader } from '@react-google-maps/api';
 import { RecoilRoot } from 'recoil';
 import Map from './components/map/Map.js';
 import Main from './components/main/main.jsx';
-import Game from './game/game.js';
 import { mapOptions } from './components/map/MapConfiguration.js';
 import './App.css';
 
@@ -18,12 +17,9 @@ function App() {
 
   return (
     <RecoilRoot>
-      <Game />
       <div className="App">
         <Main theMap={googleMap} />
-      
-      </div>
-    
+      </div>    
     </RecoilRoot>
   );
 }

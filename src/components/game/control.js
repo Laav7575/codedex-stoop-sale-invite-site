@@ -41,11 +41,11 @@ const Control = ({ onClear }) => {
                 {
                     isRunning ? 
                         (
-                            <button onClick={togglePause}>
+                            <button className="green-button" onClick={togglePause}>
                                 PAUSE
                             </button>
                         ) : (
-                            <button onClick={onStart}>
+                            <button className="green-button" onClick={onStart}>
                                 START
                             </button>
                         )                        

@@ -6,6 +6,7 @@ import { createDot, removeDot, calculatePoints } from './utils';
 import Control from './control';
 import Dot from './dot';
 import Score from './score';
+import './game.css';
 
 const Game = () => {
     const [dots, updateDots] = useRecoilState(dotsState);
@@ -64,8 +65,8 @@ const Game = () => {
 
     document.addEventListener('mousemove', function(e) {
         var image = document.getElementById('cursor-follow-image');
-        var offsetX = 115; 
-        var offsetY = 400; 
+        var offsetX = 115; // 115
+        var offsetY = 1235; // 400
     
         image.style.left = (e.pageX - offsetX) + 'px';
         image.style.top = (e.pageY - offsetY) + 'px';
@@ -81,13 +82,13 @@ const Game = () => {
     ];
 
     return (
-        <div className="main">
+        <div>
             <div className="panel">
                 <Control onClear={clear} />
                 <Score />
             </div>
             <div className="field" ref={fieldRef}>
-            <img id="cursor-follow-image" src="assets/basket.png" alt="Image"></img>
+            <img id="cursor-follow-image" src="./assets/basket.png" alt="Basket" />
                 {dots.map((dot, index) => {
                     const x = (fieldRef.current.offsetWidth - dot.size) * dot.x / 100;
                     return (

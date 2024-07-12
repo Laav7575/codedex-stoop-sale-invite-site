@@ -23,29 +23,3 @@
     color: #303030;
     padding: 25px 50px 25px 50px;
 }
-
-/* Field params */
-.field {
-    height: 500px;
-    background-color: #adcdca;
-    border: .5px solid rgba(130, 130, 130, 0.5);
-    position: relative;
-    overflow-y: hidden;
-    margin: 1em 2em;
-    cursor: none;
-}
-
-#cursor-follow-image {
-    position: absolute;
-    width: 50px; 
-    height: auto;
-    pointer-events: none; 
-}
-
-/* Dot positioning */
-.dot {
-    border: .5px solid rgba(130, 130, 130, 0.5);
-    opacity: 0.8;
-    border-radius: 50%;
-    position: absolute;
-}

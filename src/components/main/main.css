@@ -71,3 +71,11 @@
     font-weight: 500;
     margin-top: 10px;
 }
+
+.footer {
+    display: flex;
+    gap: 50px;
+    width: 70vw;
+    margin: auto;
+    justify-content: center;
+}
