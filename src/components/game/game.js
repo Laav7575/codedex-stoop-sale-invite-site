@@ -76,7 +76,7 @@ const Game = () => {
         const handleMouseMove = (e) => {
             const image = document.getElementById('cursor-follow-image');
             const offsetX = 115; 
-            const offsetY = 1265; 
+            const offsetY = 1450; 
 
             image.style.left = `${e.pageX - offsetX}px`;
             image.style.top = `${e.pageY - offsetY}px`;
