@@ -13,7 +13,7 @@ export default function Form({onClose}) {
             <div className="blocker"></div>
             <div className="popup">
                 <div className="close-button" onClick={onClose}>X</div>
-                {!rsvpd && <div>
+                {!rsvpd && <div className="center">
                     <span className="title">RSVP to our Super Stoop Sale!</span>
                     <div className="form">
                         <div className="line">
@@ -30,8 +30,8 @@ export default function Form({onClose}) {
                     </div>
                 </div>}
                 {rsvpd && <div className="rsvp-image">
+                    <div className="rsvp-text">Thanks for RSVP'ing! We're excited to see you there!</div>
                     <img src="./assets/chelsealil.png" alt-text="image of chelsea and lil happy"/>
-                    <div className="rsvp-text">Thanks for RSVP'ing, excited to see you there!</div>
                 </div>}
             </div>
         </div>
