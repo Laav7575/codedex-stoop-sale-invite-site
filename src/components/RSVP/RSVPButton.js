@@ -1,13 +1,16 @@
 import React from 'react'
 import './RSVPButton.css'
-//test button
-function clickMe(){
-  alert('Successfully RSVPd!');
-}
 
-function RSVPButton({type}) {
-  return <button onClick={clickMe} className={type}>RSVP</button>
-  
+function RSVPButton({handleClick}) {
+  // function clickMe(){
+  //   alert('Successfully RSVPd!');
+  // }
+
+  return (
+    <button onClick={handleClick} className="pill">
+      RSVP
+    </button>
+  )
 }
 
 export default RSVPButton

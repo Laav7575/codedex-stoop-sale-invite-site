@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./main.css"
 import Button from "../RSVP/RSVPButton";
 import Countdown from "../countdown/countdown"
-export default function main({theMap}) {
+export default function Main({theMap}) {
+    const [ rsvpd, setRsvpd ] = useState(false);
+
+    function handleRSVP() {
+        setRsvpd(true);
+    }
+
     return (
         <div className="main">
             <div className="header">
@@ -14,8 +20,8 @@ export default function main({theMap}) {
                     <div className="hero">
                         <div className="location">{theMap}</div>
                         <div className="blurb">
-                            <span>Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! Shoes, clothing, and more!</span>
-                            <span>Saturday July 20th, 9am-3pm</span>
+                            <div>Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! Selling shoes, clothing, and more. Write some more stuff here!</div>
+                            <div className="date">Saturday July 20th, 9am-3pm</div>
                         </div>
                     </div>
                     <div>
@@ -23,7 +29,11 @@ export default function main({theMap}) {
                     </div>
                 </div>
                 <div className="rsvp">
-                    <div><Button type="pill" /></div>
+                    <div className="rsvp-button"><Button handleClick={handleRSVP}/></div>
+                    {rsvpd && <div className="rsvp-image">
+                        <img src="./assets/chelsealil.png" alt-text="image of chelsea and lil happy"/>
+                        <div className="rsvp-text">Thanks for RSVP'ing, excited to see you there!</div>
+                    </div>}
                 </div>
             </div>
             <div className="game">
