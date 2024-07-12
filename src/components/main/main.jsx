@@ -40,7 +40,7 @@ export default function Main({theMap}) {
                         </div>
                     </div>
                 </div>
-                <div className="countdown">
+                <div>
                     <Countdown />
                 </div>
             </div>

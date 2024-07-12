@@ -12,15 +12,21 @@
     --dark-blue: #2E4057;
     --blue: #437C90;
 }
-  
 
 * {
     font-family: 'Roboto', sans-serif;
     user-select: none;
+    padding: 0;
+    margin: 0;
 }
 
 .main {
     text-align: center;
     color: #303030;
     padding: 25px 50px 25px 50px;
+}
+
+.app {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/959/490/original/seamless-pattern-with-different-flower-elements-garden-repeating-background-with-decorative-plants-texture-with-spring-and-summer-herbs-and-flowers-vector.jpg");
+    box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.8);
 }

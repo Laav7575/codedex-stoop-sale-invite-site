@@ -66,7 +66,7 @@ const Game = () => {
     document.addEventListener('mousemove', function(e) {
         var image = document.getElementById('cursor-follow-image');
         var offsetX = 115; // 115
-        var offsetY = 1315; // 400
+        var offsetY = 1265; // 400
     
         image.style.left = (e.pageX - offsetX) + 'px';
         image.style.top = (e.pageY - offsetY) + 'px';

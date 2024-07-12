@@ -17,9 +17,9 @@ function App() {
 
   return (
     <RecoilRoot>
-      <div className="App">
+      <div className="app">
         <Main theMap={googleMap} />
-      </div>    
+      </div>
     </RecoilRoot>
   );
 }
