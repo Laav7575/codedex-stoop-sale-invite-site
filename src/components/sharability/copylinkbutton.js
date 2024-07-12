@@ -11,7 +11,7 @@ const CopyToClipboardButton = ({ content }) => {
   };
 
   return (
-    <button onClick={handleCopy}>Copy to Clipboard</button>
+    <button onClick={handleCopy}>Copy Link</button>
   );
 };
 
