@@ -7,6 +7,7 @@ import Game from './game/game.js';
 import { mapOptions } from './components/map/MapConfiguration.js';
 import './App.css';
 
+
 function App() {
   const { isLoaded } = useJsApiLoader({
     id: mapOptions.googleMapApiKey,
@@ -20,7 +21,9 @@ function App() {
       <Game />
       <div className="App">
         <Main theMap={googleMap} />
+      
       </div>
+    
     </RecoilRoot>
   );
 }
