@@ -4,6 +4,7 @@ import './App.css';
 import Main from "./components/main/main.jsx";
 import { mapOptions } from "./components/map/MapConfiguration.js";
 
+
 function App() {
   const { isLoaded } = useJsApiLoader({
     id: mapOptions.googleMapApiKey,
@@ -15,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <Main theMap={googleMap}/>
+      
     </div>
+    
   );
 
 }

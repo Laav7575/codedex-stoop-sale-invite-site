@@ -1,7 +1,7 @@
 import React from 'react';
 import "./main.css"
 import Button from "../RSVP/RSVPButton";
-
+import Countdown from "../countdown/countdown"
 export default function main({theMap}) {
     return (
         <div className="main">
@@ -19,7 +19,7 @@ export default function main({theMap}) {
                         </div>
                     </div>
                     <div>
-                        <div className="countdown">placeholder for countdown here</div>
+                        <div className="countdown"><Countdown /></div>
                     </div>
                 </div>
                 <div className="rsvp">
