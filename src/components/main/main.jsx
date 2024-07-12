@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import "./main.css"
 import Button from "../RSVP/RSVPButton";
 import Countdown from "../countdown/countdown"
+import CopyButton from "../sharability/copylinkbutton.js";
 export default function Main({theMap}) {
     const [ rsvpd, setRsvpd ] = useState(false);
-
+    
     function handleRSVP() {
         setRsvpd(true);
+        
     }
+
+    
+    
 
     return (
         <div className="main">
@@ -36,6 +41,7 @@ export default function Main({theMap}) {
                     </div>}
                 </div>
             </div>
+            <div className="copylink"><CopyButton /></div>
             <div className="game">
                 game goes here
             </div>
