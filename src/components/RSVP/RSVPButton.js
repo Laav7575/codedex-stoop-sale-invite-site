@@ -1,20 +1,12 @@
-import React, {useState} from 'react'
-import './RSVPButton.css'
+import React from 'react';
+import './RSVPButton.css'; // Import CSS styles for RSVPButton
 
-
-
-function RSVPButton({handleClick}) {
-  // function clickMe(){
-  //   alert('Successfully RSVPd!');
-  // }
-  
-
+function RSVPButton({ handleClick }) {
   return (
     <button onClick={handleClick} className="pill">
-      RSVP
+      RSVP {/* Button text */}
     </button>
-    
-  )
+  );
 }
 
-export default RSVPButton
+export default RSVPButton;

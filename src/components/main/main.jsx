@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
-import "./main.css"
-import Button from "../RSVP/RSVPButton";
-import Form from "../RSVP/RSVPForm";
-import Countdown from "../countdown/countdown"
-import CopyButton from "../sharability/copylinkbutton.js";
-import InstaButton from "../sharability/instagrambutton.js"
-import Game from '../game/game.js';
+import "./main.css"; // Import CSS styles for this component
+import Button from "../RSVP/RSVPButton"; // Import RSVPButton component
+import Form from "../RSVP/RSVPForm"; // Import RSVPForm component
+import Countdown from "../countdown/countdown"; // Import Countdown component
+import CopyButton from "../sharability/copylinkbutton.js"; // Import CopyButton component
+import InstaButton from "../sharability/instagrambutton.js"; // Import InstaButton component
+import Game from '../game/game.js'; // Import Game component
 
-export default function Main({theMap}) {
-    const [ showPopup, setShowPopup ] = useState(false);
+export default function Main({ theMap }) {
+    const [showPopup, setShowPopup] = useState(false); // State to manage RSVP form visibility
 
+    // Function to open RSVP form popup
     function handleRSVP() {
         setShowPopup(true);
     }
 
+    // Function to close RSVP form popup
     function closePopup() {
         setShowPopup(false);
-    }    
+    }
 
     return (
         <div className="main">
@@ -26,7 +28,7 @@ export default function Main({theMap}) {
             </div>
             <div className="body">
                 <div className="info">
-                    <div className="location">{theMap}</div>
+                    <div className="location">{theMap}</div> {/* Render the Google Map component */}
                     <div className="description">
                         <div className="blurb">
                             <div>
@@ -36,26 +38,26 @@ export default function Main({theMap}) {
                             <div className="date">Carroll Gardens, corner of Court Street & 2nd Avenue</div>
                         </div>
                         <div className="rsvp">
-                            <div className="rsvp-button"><Button handleClick={handleRSVP}/></div>
-                            {showPopup && <Form onClose={closePopup}/>}
+                            <div className="rsvp-button"><Button handleClick={handleRSVP} /></div> {/* Render RSVPButton */}
+                            {showPopup && <Form onClose={closePopup} />} {/* Render RSVPForm if showPopup is true */}
                         </div>
                     </div>
                 </div>
                 <div>
-                    <Countdown />
+                    <Countdown /> {/* Render Countdown component */}
                 </div>
             </div>
             <div className="game">
-                <Game />
+                <Game /> {/* Render Game component */}
             </div>
             <div className="footer">
                 <div className="instructions">Spread the word!</div>
                 <div className="links">
-                <div className="copylink"><CopyButton /></div>
-                <div className="instalink"><InstaButton /></div>
-                <a className="calendarlink" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGlldGJ2Z2VobWNkcmhlY3ZyN2VicWlnbzEgbGFhdmFueWEudGhpYWdhQG0&tmsrc=laavanya.thiaga%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en-GB.gif" /></a>
+                    <div className="copylink"><CopyButton /></div> {/* Render CopyButton */}
+                    <div className="instalink"><InstaButton /></div> {/* Render InstaButton */}
+                    <a className="calendarlink" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGlldGJ2Z2VobWNkcmhlY3ZyN2VicWlnbzEgbGFhdmFueWEudGhpYWdhQG0&tmsrc=laavanya.thiaga%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en-GB.gif" alt="Add to Google Calendar" /></a>
                 </div>
             </div>
         </div>
-    )
+    );
 }

@@ -1,9 +1,7 @@
-
-
 .main {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 50px; /* Vertical gap between child elements */
 }
 
 .header {
@@ -12,7 +10,7 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 20px; /* Vertical gap between child elements */
     margin-top: 20px;
 }
 
@@ -24,81 +22,81 @@
 .header .title {
     font-size: 48px;
     font-weight: 800;
-    border: 4px solid var(--black);
-    border-radius: 10px;
+    border: 4px solid var(--black); /* Border style */
+    border-radius: 10px; /* Border radius */
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Maximum width */
     text-align: center;
-    padding: 20px;
-    background-color: var(--green);
-    color: white;
+    padding: 20px; /* Padding inside the element */
+    background-color: var(--green); /* Background color */
+    color: white; /* Text color */
 }
 
 .body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
+    max-width: 1200px; /* Maximum width of the body */
+    margin: auto; /* Center align horizontally */
+    gap: 20px; /* Vertical gap between child elements */
 }
 
 .info {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Horizontal gap between child elements */
 }
 
 .location {
-    border: 4px solid var(--dark-green);
-    border-radius: 10px;
+    border: 4px solid var(--dark-green); /* Border style */
+    border-radius: 10px; /* Border radius */
 }
 
 .description {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: white;
+    gap: 20px; /* Vertical gap between child elements */
+    background-color: white; /* Background color */
 }
 
 .blurb {
-    border: 4px solid var(--dark-green);
-    border-radius: 10px;
+    border: 4px solid var(--dark-green); /* Border style */
+    border-radius: 10px; /* Border radius */
     font-size: 24px;
-    padding: 30px;
-    flex: 1;
+    padding: 30px; /* Padding inside the element */
+    flex: 1; /* Flex-grow to fill available space */
 }
 
 .date {
-    font-weight: 500;
-    margin-top: 10px;
+    font-weight: 500; /* Font weight */
+    margin-top: 10px; /* Top margin */
 }
 
 .links {
     display: flex;
-    gap: 50px;
-    width: 70vw;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+    gap: 50px; /* Horizontal gap between child elements */
+    width: 70vw; /* Width relative to viewport width */
+    margin: auto; /* Center align horizontally */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
 }
 
 .footer button {
-    padding: 10px 20px;
-    font-size: 20px;
-    border: 3px solid var(--black);
-    color: var(--black);
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 20px; /* Font size */
+    border: 3px solid var(--black); /* Border style */
+    color: var(--black); /* Text color */
 }
 
 .footer button:hover {
-    background-color: var(--gray);
-    color: var(--black);
-    cursor: pointer;
+    background-color: var(--gray); /* Background color on hover */
+    color: var(--black); /* Text color on hover */
+    cursor: pointer; /* Cursor style on hover */
 }
 
 .calendarlink {
-    height: 100%;
+    height: 100%; /* Full height */
 }
 
 .calendarlink img {
-    height: 45px;
+    height: 45px; /* Image height */
 }

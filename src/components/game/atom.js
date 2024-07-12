@@ -1,19 +1,22 @@
-import  { atom } from 'recoil';
-// Control params - if game is launched and current speed
+import { atom } from 'recoil';
+
+// Atom for controlling game options
 export const controlOptions = atom({
-    key: 'controlOptions',
+    key: 'controlOptions', // Unique identifier for this atom
     default: {
-        isRunning: false,
-        speed: 5,
+        isRunning: false, // Initial state: game is not running
+        speed: 5,         // Initial state: default speed set to 5
     },
 });
-// List of dots in the game - empty by default
+
+// Atom for managing dots state
 export const dotsState = atom({
-    key: 'dotsState',
-    default: [],
+    key: 'dotsState', // Unique identifier for this atom
+    default: [],      // Initial state: empty array for no dots initially
 });
-// Current score - zero by default
+
+// Atom for managing score state
 export const scoreState = atom({
-    key: 'scoreState',
-    default: 0,
+    key: 'scoreState', // Unique identifier for this atom
+    default: 0,        // Initial state: score starts at 0
 });

@@ -1,32 +1,35 @@
 .countdown {
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
+    padding: 20px;
 }
 
-.countdown .content{
+.countdown .content {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Adjusted to wrap items */
     justify-content: center;
-    margin: auto;
     gap: 5px;
 }
 
-.countdown .h2{
+.countdown h2 {
     margin-bottom: 20px;
     font-size: 50px;
+    text-align: center; /* Center align the heading */
 }
 
 .countdown .box {
-    width: calc(100%/4);
+    width: calc(100% / 4); /* Each box takes 1/4th of the width */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 180px;
     max-width: 125px;
-    
-    @media screen and(min-width: 550px) {
+}
+
+@media screen and (min-width: 550px) {
+    .countdown .box {
         max-width: 200px;
         height: 250px;
     }
@@ -45,18 +48,13 @@
     position: relative;
     color: white;
     box-shadow: -2px 0px 5px 1px var(--dark-blue);
-    
 }
 
-@media screen and(min-width: 550px) {
+@media screen and (min-width: 550px) {
     .countdown .value {
         font-size: 100px;
         height: 200px;
         width: 200px;
-    }
-    .countdown .box {
-        max-width: 200px;
-        height: 250px;
     }
 }
 
@@ -65,9 +63,9 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    z-index: 2;
-   /* background-color: #2296908f;
-    box-shadow: 0px 0px 5px 0px #a8aba8d6;*/
+    background-color: #2296908f; /* Adjusted background color */
+    box-shadow: 0px 0px 5px 0px #a8aba8d6;
+    bottom: 0;
 }
 
 .countdown .value::after {
@@ -76,8 +74,10 @@
     left: -7px;
     width: 10px;
     height: 20px;
-    /*background-color: #57574d8f;
-    box-shadow: 0px 0px 5px 0px #000d00d6;*/
+    background-color: #57574d8f; /* Adjusted background color */
+    box-shadow: 0px 0px 5px 0px #000d00d6;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .countdown .label {
@@ -85,5 +85,5 @@
     font-weight: 300;
     letter-spacing: 4px;
     margin-top: 10px;
+    text-align: center; /* Center align the label text */
 }
-

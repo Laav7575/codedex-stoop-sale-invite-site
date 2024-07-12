@@ -1,13 +1,14 @@
-
+/* Semi-transparent overlay to cover the entire screen */
 .blocker {
     position: fixed;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.25); /* Semi-transparent black background */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
 
+/* Container for the popup, centered on the screen */
 .popup-container {
     position: fixed;
     display: flex;
@@ -17,76 +18,86 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 100; /* Ensure popup appears above other content */
 }
 
+/* Popup box */
 .popup {
     position: relative;
     width: 800px;
     height: 400px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 40px;
-    box-sizing: border-box;
+    background-color: white; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 40px; /* Padding inside the popup */
+    box-sizing: border-box; /* Include padding and border in total width/height */
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    align-items: center; /* Center content vertically */
 }
 
+/* Close button to dismiss the popup */
 .close-button {
     position: absolute;
     top: 15px;
     right: 20px;
-    cursor: pointer;
+    cursor: pointer; /* Pointer cursor on hover */
     font-size: 24px;
     font-weight: 600;
 }
 
+/* Hover effect for the close button */
+.close-button:hover {
+    color: red; /* Change text color to red on hover */
+}
+
+/* Centered content within the popup */
 .popup .center {
     width: 100%;
 }
 
-.close-button:hover {
-    color: red;
-}
-
+/* Title styling inside the popup */
 .popup .title {
     font-size: 32px;
     font-weight: 600;
 }
 
+/* Form container within the popup */
 .popup .form {
-    box-sizing: border-box;
-    padding: 30px 10px;
+    box-sizing: border-box; /* Include padding and border in total width/height */
+    padding: 30px 10px; /* Padding top/bottom, left/right */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Form elements in a column layout */
+    gap: 20px; /* Spacing between form elements */
     width: 100%;
 }
 
+/* Individual line (row) within the form */
 .form .line {
     font-size: 26px;
     font-weight: 500;
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    gap: 10px; /* Spacing between elements in the line */
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Center elements vertically */
 }
 
+/* Input fields within each line */
 .form .line input {
     padding: 10px;
     font-size: 24px;
     width: 100%;
 }
 
+/* Span element in each line */
 .form .line span {
     width: 100px;
 }
 
+/* Styling for buttons within the form */
 .form button {
     margin: 0;
 }
 
+/* Container for RSVP success image and text */
 .rsvp-image {
     display: flex;
     font-size: 24px;
@@ -95,17 +106,19 @@
     position: relative;
     margin-top: 20px;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Evenly distribute items horizontally */
 }
 
+/* RSVP success image */
 .rsvp-image img {
     width: 288px;
-    border: 4px solid var(--dark-green);
-    border-radius: 5px;
+    border: 4px solid var(--dark-green); /* Green border */
+    border-radius: 5px; /* Slightly rounded corners */
 }
 
+/* Text styling within the RSVP section */
 .rsvp-text {
     padding: 12px;
     width: 296px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in total width/height */
 }
