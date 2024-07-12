@@ -29,7 +29,9 @@ export default function Main({theMap}) {
                     <div className="location">{theMap}</div>
                     <div className="description">
                         <div className="blurb">
-                            <div>Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! Selling shoes, clothing, and more. Write some more stuff here!</div>
+                            <div>
+                                Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! A stoop sale is a garage sale, but better! Enjoy getting thrifted goods and new treasures, including clothing, shoes, and more. More surprises in store - come by to find out!
+                            </div>
                             <div className="date">Saturday July 20th, 9am-3pm</div>
                         </div>
                         <div className="rsvp">
@@ -46,9 +48,12 @@ export default function Main({theMap}) {
                 <Game />
             </div>
             <div className="footer">
+                <div className="instructions">Spread the word!</div>
+                <div className="links">
                 <div className="copylink"><CopyButton /></div>
                 <div className="instalink"><InstaButton /></div>
-                <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGlldGJ2Z2VobWNkcmhlY3ZyN2VicWlnbzEgbGFhdmFueWEudGhpYWdhQG0&tmsrc=laavanya.thiaga%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en-GB.gif" /></a>
+                <a className="calendarlink" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGlldGJ2Z2VobWNkcmhlY3ZyN2VicWlnbzEgbGFhdmFueWEudGhpYWdhQG0&tmsrc=laavanya.thiaga%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en-GB.gif" /></a>
+                </div>
             </div>
         </div>
     )
