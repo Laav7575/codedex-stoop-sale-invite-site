@@ -1,12 +1,7 @@
-import React from 'react';
-import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
-import { mapOptions } from './MapConfiguration';
+import React, { useEffect, useRef, useState } from 'react';
+import { Loader } from '@googlemaps/js-api-loader';
 
 const Map = () => {
-    const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: mapOptions.googleMapApiKey,
-    });
-
     const containerStyle = {
         width: '400px',
         height: '400px',
@@ -14,25 +9,42 @@ const Map = () => {
     };
 
     const center = {
-        lat: 40.67933,
-        lng: -73.99735,
+        lat: 40.67933, 
+        lng: -73.99735, 
     };
 
-    if (loadError) {
-        return <div>Error loading maps</div>;
-    }
+    const mapRef = useRef(null);
+    const [map, setMap] = useState(null);
 
-    return (
-        isLoaded && (
-            <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={18}
-            >
-                <Marker position={center}/>
-            </GoogleMap>
-        )
-    );
+    useEffect(() => {
+        const loader = new Loader({
+            apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+            version: '3.47', 
+        });
+
+        loader.load().then(() => {
+            initializeMap();
+        }).catch(error => {
+        });
+    }, []);
+
+    const initializeMap = () => {
+        if (!mapRef.current) return;
+
+        const mapInstance = new window.google.maps.Map(mapRef.current, {
+            center: center,
+            zoom: 18,
+        });
+
+        new window.google.maps.Marker({
+            position: center,
+            map: mapInstance,
+        });
+
+        setMap(mapInstance);
+    };
+
+    return <div ref={mapRef} style={containerStyle}></div>;
 };
 
 export default Map;
