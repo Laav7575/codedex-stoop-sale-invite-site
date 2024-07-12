@@ -27,9 +27,8 @@ const Countdown = () => {
 
   return ( 
     <div className="countdown"> 
-        <h2>Countdown</h2>
+        <h2>Who's Ready? Countdown to the event:</h2>
         <div className='content'>
-
             {Object.entries(timeLeft).map((el) => {
                 const label = el[0];
                 const value = el[1];
@@ -42,9 +41,6 @@ const Countdown = () => {
                     </div>
                 );
             })}
-
-            
-
         </div>
     </div>
   );
