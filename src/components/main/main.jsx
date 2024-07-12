@@ -33,6 +33,7 @@ export default function Main({theMap}) {
                                 Come by Carroll Gardens and check out Chelsea and Lil's Stoop Sale! A stoop sale is a garage sale, but better! Enjoy getting thrifted goods and new treasures, including clothing, shoes, and more. More surprises in store - come by to find out!
                             </div>
                             <div className="date">Saturday July 20th, 9am-3pm</div>
+                            <div className="date">Carroll Gardens, corner of Court Street & 2nd Avenue</div>
                         </div>
                         <div className="rsvp">
                             <div className="rsvp-button"><Button handleClick={handleRSVP}/></div>
