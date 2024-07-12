@@ -4,6 +4,7 @@ import Button from "../RSVP/RSVPButton";
 import Form from "../RSVP/RSVPForm";
 import Countdown from "../countdown/countdown"
 import CopyButton from "../sharability/copylinkbutton.js";
+import InstaButton from "../sharability/instagrambutton.js"
 
 
 export default function Main({theMap}) {
@@ -46,6 +47,7 @@ export default function Main({theMap}) {
                 </div>
             </div>
             <div className="copylink"><CopyButton /></div>
+            <div className="instalink"><InstaButton /></div>
             <div className="game">
                 game goes here
             </div>
